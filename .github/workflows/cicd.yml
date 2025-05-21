@@ -25,7 +25,7 @@ jobs:
         needs: testing
         steps:
             - name: deploy
-              uses: applboy/ssh-action@master
+              uses: appleboy/ssh-action@master
               with:
                 host: 83.166.245.131
                 username: root
