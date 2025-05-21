@@ -19,7 +19,20 @@ jobs:
                 - name: Установка зависимостей
                   run: pip install -r requirements.txt
 
-                - name: Линтер
-                  run: flake8 deploy --exclude migrations --ignore E501, F401, E302, W293, W391, W292
+
+    deploy:
+        runs-on: ubuntu-latest
+        needs: testing
+        steps:
+            - name: deploy
+              uses: applboy/ssh-action@master
+              with:
+                host: 83.166.245.131
+                username: root
+                password: erujD5N8zGXuKc5g
+                script: |
+                    cd for_deploy/deploy
+                    git pull
+                    sudo systemctl restart gunicorn
 
               
