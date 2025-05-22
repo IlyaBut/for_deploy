@@ -32,8 +32,9 @@ jobs:
                 password: erujD5N8zGXuKc5g
                 script: |
                     su - ilya
-                    cd for_deploy
-                    git reset --hard
+                    cd for_deploy/deploy
+                    git stash
+                    git stash drop
                     git pull
                     sudo systemctl restart gunicorn
 
