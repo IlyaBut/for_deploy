@@ -33,8 +33,7 @@ jobs:
                 script: |
                     su - ilya
                     cd for_deploy/deploy
-                    git stash
-                    git stash drop
+                    git commit -m "commit1"
                     git pull
                     sudo systemctl restart gunicorn
 
