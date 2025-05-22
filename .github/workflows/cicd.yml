@@ -28,9 +28,10 @@ jobs:
               uses: appleboy/ssh-action@master
               with:
                 host: 83.166.245.131
-                username: ilya
+                username: root
                 password: erujD5N8zGXuKc5g
                 script: |
+                    su - ilya
                     cd for_deploy/deploy
                     git pull
                     sudo systemctl restart gunicorn
