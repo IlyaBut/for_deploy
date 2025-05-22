@@ -33,7 +33,7 @@ jobs:
                 script: |
                     su - ilya
                     cd for_deploy/deploy
-                    git commit -m "commit1"
+                    git commit -a -m "commit2"
                     git pull
                     sudo systemctl restart gunicorn
 
