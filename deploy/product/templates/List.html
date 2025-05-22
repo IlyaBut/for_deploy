@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>Список товаров(CI/CD успешно!)</h1>
+    <h1>Список товаров(CI/CD 2 попытка успешно!)</h1>
     {% for p in products %}
         <img src="{{p.image.url}}" height="200" width="300">
         <a href="{% url 'details' product_id=p.id %}"><h2>{{ p.name }}</h2></a>

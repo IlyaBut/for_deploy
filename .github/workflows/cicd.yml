@@ -28,7 +28,7 @@ jobs:
               uses: appleboy/ssh-action@master
               with:
                 host: 83.166.245.131
-                username: root
+                username: ilya
                 password: erujD5N8zGXuKc5g
                 script: |
                     cd for_deploy/deploy
